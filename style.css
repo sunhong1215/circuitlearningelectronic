@@ -66,7 +66,19 @@ body {
     border: dashed 2px #35465d;
     background-color: #ffffff;
 }
-
+.result-show-wrap {
+    width: 14%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+    border: dashed 2px #35465d;
+    background-color: #ffffff;
+}
+.result-show-wrap:hover {
+    background-color: #35465d82;
+    border: 2px dashed #ffffff;
+}
 .image-dropping,
 .image-upload-wrap:hover {
     background-color: #35465d82;
@@ -260,6 +272,74 @@ body {
   background-color: rgba(251, 176, 59, 0.2);
 }
 .OPAMP-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(251, 176, 59, 1);
+}
+.RCcircuit-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(235, 166, 190, 0.2);
+}
+.RCcircuit-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(235, 166, 190, 1);
+}
+.RLcircuit-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.RLcircuit-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.RCLcircuit-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.RCLcircuit-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+.OPAMPcircuit-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(251, 176, 59, 0.2);
+}
+.OPAMPcircuit-bar {
   position: absolute;
   top: 0;
   left: 0;

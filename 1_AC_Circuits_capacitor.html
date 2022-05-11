@@ -8,11 +8,13 @@
 		<div id="wrapper">
 			<header id="js-header">
 				<div class="container clearfix">
-					<h1 id="logo">Apples</h1>
+					<h1 id="logo">"AC Circuits"</h1>
+					<h2 id="logo">(60Hz 교류일 때 RC회로)</h2>
 					<nav>
-						<a href="#bacon">Bacon</a>
-						<a href="#sausage">Sausage</a>
-						<a href="#biltong">Biltong</a>
+						
+						<a href="#">Home</a>
+						<a href="#"><img src="경로" alt="" onclick="clickBtn();" border="0" /></a>
+						<a href="#sausage">뒤로 가기</a>
 					</nav>
 				</div>
 			</header>
@@ -21,58 +23,95 @@
 				<div id="content">
 					<section>
 						<div class="container">
-							<h1>I Second That Emotion</h1>
+							<h1>회로도(circuit schematic)</h1>
+							</div>
+							<img src="img/spice_circuit/1_AC_Circuits_capacitor.png" class="mt-5 pt-5 upload" alt = "회로도" />
+							
 							<p>
-								Aww, it's true. I've been hiding it for so long. Perhaps, but
-								perhaps your civilization is merely the sewer of an even greater
-								society above you! You guys go on without me! I'm going to go… look
-								for more stuff to steal! When I was first asked to make a film about
-								my nephew, Hubert Farnsworth, I thought "Why should I?" Then later,
-								Leela made the film. But if I did make it, you can bet there would
-								have been more topless women on motorcycles. Roll film! So I really
-								am important? How I feel when I'm drunk is correct? Is the Space
-								Pope reptilian!?
+							위 회로는 저항과 캐패시터로 이루어진 직렬 회로이다.
 							</p>
-							<p>Bacon atball corned beef strip steak andouille.</p>
+							<p>
+							위와 같이 R과 C를 연결하고 C단자에 걸리는 전압을 Vout이라고 하면, 출력전압이 입력전압에 대해 뒤지는 위상을 가지는 회로가 된다.
+						    </p>
+							<p>
+							이를 RC 지상회로(RC lag)라고 한다.
+							</p>
 						</div>
 					</section>
 					<section class="color">
 						<div class="container">
-							<h1>The Duh-Vinci Code</h1>
-							<p>
-								Bender, you risked your life to save me! Good news, everyone! I've
-								taught the toaster to feel love! I can explain. It's very valuable.
-								Can we have Bender Burgers again? For the last time, I don't like
-								lilacs! Your 'first' wife was the one who liked lilacs! You seem
-								malnourished. Are you suffering from intestinal parasites? Say what?
-								Now, now. Perfectly symmetrical violence never solved anything.
-								Eeeee! Now say "nuclear wessels"! Ugh, it's filthy! Why not create a
-								National Endowment for Strip Clubs while we're at it? I suppose I
-								could part with 'one' and still be feared… Noooooo! Have you ever
-								tried just turning off the TV, sitting down with your children, and
-								hitting them? Isn't it true that you have been paid for your
-								testimony? All I want is to be a monkey of moderate intelligence who
-								wears a suit… that's why I'm transferring to business school! We'll
-								need to have a look inside you with this camera. Really?!
-							</p>
-							<p>Bacon ipsum dolor sit amet pig biltong filet mignon, kiel</p>
+							<h1>실제 회로의 모습</h1>
+							<img src="img/spice_circuit/1_AC_Circuits_capacitor.png" class="mt-5 pt-5 upload" alt = "실제 회로 이미지" />
 						</div>
 					</section>
 					<section>
 						<div class="container">
-							<h1>A Bicyclops Built For Two</h1>
+							<h1>SPICE</h1>
+							
 							<p>
-								I decline the title of Iron Cook and accept the lesser title of Zinc
-								Saucier, which I just made up. Uhh… also, comes with double prize
-								money. Ugh, it's filthy! Why not create a National Endowment for
-								Strip Clubs while we're at it? Oh dear! She's stuck in an infinite
-								loop, and he's an idiot! Well, that's love for you. For the last
-								time, I don't like lilacs! Your 'first' wife was the one who liked
-								lilacs! I was having the most wonderful dream. Except you were
-								there, and you were there, and you were there! You guys go on
-								without me! I'm going to go… look for more stuff to steal!
+							 현재 회로를 시뮬레이션하기 위해서는 text를 복사해야 합니다.								
+							<p class="box01">
+								
+								
+								
+								<script>
+// 클립보드로 복사하는 기능을 생성
+function copyToClipboard(elementId) {
+
+  // 글을 쓸 수 있는 란을 만든다.
+  var aux = document.createElement("input");
+
+  // 지정된 요소의 값을 할당 한다.
+  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+
+  // bdy에 추가한다.
+  document.body.appendChild(aux);
+
+  // 지정된 내용을 강조한다.
+  aux.select();
+
+  // 텍스트를 카피 하는 변수를 생성
+  document.execCommand("copy");
+
+  // body 로 부터 다시 반환 한다.
+  document.body.removeChild(aux);
+
+}
+</script>
+
+
+<!--복사할 텍스트 만들기-->
+<p id="text1">$ 1 0.000005 10.20027730826997 50 5 43 5e-11
+r 176 80 384 80 0 10
+s 384 80 448 80 0 1 false
+w 176 80 176 352 0
+c 384 352 176 352 0 0.000015 1.36388084897325 -10
+l 384 80 384 352 0 1 0.041301296155105444 0
+v 448 352 448 80 0 0 40 5 0 0 0.5
+r 384 352 448 352 0 100
+o 4 64 0 4099 20 0.05 0 2 4 3
+o 3 64 0 4099 20 0.05 1 2 3 3
+o 0 64 0 4099 0.625 0.05 2 2 0 3
+38 3 F1 0 0.000001 0.000101 -1 Capacitance
+38 4 F1 0 0.01 1.01 -1 Inductance
+38 0 F1 0 1 101 -1 Resistance
+h 1 4 3</p>
+
+  <!--// 버튼 만들기-->
+<button onclick="copyToClipboard('text1')">텍스트 복사하기</button>
+
+  <!--input 란 만들기-->
+<br /><br /><input placeholder="이곳에 ctrl+v로 붙여넣기 테스트" type="text">
+								
+								
+								
+							<p>
+							 스파이스로 가는 버튼
 							</p>
-							<p>ㅋㅋㅋㅋ</p>
+							
+							<button type="button" class="navyBtn" onClick="location.href='https://www.falstad.com/circuit/circuitjs.html'">
+							
+							<a href="#"><img src="경로" alt="" onclick="clickBtn();" border="0" /></a>
 						</div>
 					</section>
 				</div>
@@ -110,10 +149,10 @@
 						<a href="https://twitter.com/lilianakastilio">@liianakastilio</a> 2013 -
 						2014
 					</div>
-				</div>
-			</footer>
-		</div>
-		<script>
+					</div>
+				</footer>
+			</div>
+			<script>
 			function resizeHeaderOnScroll() {
 				const distanceY = window.pageYOffset || document.documentElement.scrollTop,
 					shrinkOn = 200,

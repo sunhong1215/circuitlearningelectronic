@@ -45,7 +45,7 @@
 
 	<body>
 <nav class="p-3 container navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="https://circuitlearningelectronic.site/">회로학습 도우미</a>
+        <a class="navbar-brand" href="https://www.circuitlearningelectronic.site/">회로학습 도우미</a>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -60,7 +60,7 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="#"
+						<a class="nav-link" href="https://www.circuitlearningelectronic.site"
 							>Home
 							<span class="sr-only">(current)</span>
 						</a>
@@ -70,6 +70,9 @@
 					</li> -->
 					<li class="nav-item active">
 						<a class="nav-link" href="https://eclectic-meerkat-5f1f1d.netlify.app">SPICE 사용방법</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="https://verdant-kangaroo-5050d1.netlify.app">사용시 주의사항</a>
 					</li>
 				</ul>
 			</div>
@@ -214,7 +217,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 		<script type="text/javascript">
 			let URL;
-			const urlphoto = "https://teachablemachine.withgoogle.com/models/05Wc5VHgH/";
+			const urlphoto = "https://teachablemachine.withgoogle.com/models/CVTCO65tP/";
 			const urlpicture = "https://teachablemachine.withgoogle.com/models/nU8DfVbjC/";
 			let model, webcam, labelContainer, maxPredictions;
 			async function init() {
@@ -252,13 +255,13 @@
 						resultTitle = 'RL';
 						resultExplain = 'RL회로는 저항 인덕터 회로 ( RL 회로 ) 또는 RL 필터 또는 RL 네트워크 는 전압 또는 전류 소스 에 의해 구동되는 저항 과 인덕터 로 구성된 전기 회로 입니다. [1] 1차 RL 회로는 하나의 저항과 하나의 인덕터로 구성 되며, 전압원에 의해 직렬 로 구동되거나 전류원에 의해 병렬 로 구동됩니다. 이것은 가장 단순한 아날로그 무한 임펄스 응답 전자 필터 중 하나입니다';
 						resultCeleb = '대표적인 RL회로: A/C circuits-inductor, Passive Filters-R(High,Low)L';
-						resultlink = '<a target="_blank" https://nimble-beijinho-3a0b5c.netlify.app/">결과화면으로 넘어가기</a>';
+						resultlink = '<a target="_blank" href="https://subtle-vacherin-d7aa0b.netlify.app/">결과화면으로 넘어가기</a>';
 						break;
 					case 'RCL':
 						resultTitle = 'RCL';
 						resultExplain = 'RCL회로는 3개의 회로 요소인 R, L 및 C는 다양한 토폴로지 로 결합될 수 있습니다 . 직렬로 연결된 세 가지 요소 모두 또는 병렬로 연결된 세 가지 요소 모두는 개념이 가장 단순하고 분석하기 가장 간단합니다. 그러나 실제 회로에서 실제적으로 중요한 다른 배열이 있습니다. 종종 발생하는 한 가지 문제는 인덕터 저항을 고려해야 한다는 것입니다. 인덕터는 일반적으로 와이어 코일로 구성되며 저항은 일반적으로 바람직하지 않지만 종종 회로에 상당한 영향을 미칩니다.';
 						resultCeleb = '대표적인 RCL회로:RLC(seires,parallel), Band-pass Filters, Notch Filters';
-						resultlink = '<a target="_blank" href="https://ubiquitous-biscochitos-42faec.netlify.app/">결과화면으로 넘어가기</a>';
+						resultlink = '<a target="_blank" href="https://dainty-shortbread-eb9b13.netlify.app">결과화면으로 넘어가기</a>';
 						break;
 					case 'OPAMP':
 						resultTitle = 'OPAMP';
@@ -283,13 +286,13 @@
                         resultTitle = "RL"
                         resultExplain = "RL회로는 저항 인덕터 회로 ( RL 회로 ) 또는 RL 필터 또는 RL 네트워크 는 전압 또는 전류 소스 에 의해 구동되는 저항 과 인덕터 로 구성된 전기 회로 입니다. [1] 1차 RL 회로는 하나의 저항과 하나의 인덕터로 구성 되며, 전압원에 의해 직렬 로 구동되거나 전류원에 의해 병렬 로 구동됩니다. 이것은 가장 단순한 아날로그 무한 임펄스 응답 전자 필터 중 하나입니다"
                         resultCeleb = "대표적인 RL회로: A/C circuits-inductor, Passive Filters-RL"
-						resultlink = '<a target="_blank" href="https://nimble-beijinho-3a0b5c.netlify.app/">결과화면으로 넘어가기</a>';
+						resultlink = '<a target="_blank" href="https://subtle-vacherin-d7aa0b.netlify.app/">결과화면으로 넘어가기</a>';
                         break;
                     case "RCLcircuit":
                         resultTitle = "RCL"
                         resultExplain = "RCL회로는 3개의 회로 요소인 R, L 및 C는 다양한 토폴로지 로 결합될 수 있습니다 . 직렬로 연결된 세 가지 요소 모두 또는 병렬로 연결된 세 가지 요소 모두는 개념이 가장 단순하고 분석하기 가장 간단합니다. 그러나 실제 회로에서 실제적으로 중요한 다른 배열이 있습니다. 종종 발생하는 한 가지 문제는 인덕터 저항을 고려해야 한다는 것입니다. 인덕터는 일반적으로 와이어 코일로 구성되며 저항은 일반적으로 바람직하지 않지만 종종 회로에 상당한 영향을 미칩니다."
                         resultCeleb = "대표적인 RCL회로:RLC(seires,parallel), Band-pass Filters, Notch Filters"
-						resultlink = '<a target="_blank" href="https://ubiquitous-biscochitos-42faec.netlify.app/">결과화면으로 넘어가기</a>';
+						resultlink = '<a target="_blank" href="https://dainty-shortbread-eb9b13.netlify.app/">결과화면으로 넘어가기</a>';
                         break;
                     case "OPAMPcircuit":
                         resultTitle = "OPAMP"
